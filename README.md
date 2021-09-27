@@ -69,7 +69,7 @@ The machine list is a list of IP addresses to operate on.
 You can execute any script you want, but here are a few to start:
 
 - install-docker.sh - installs docker engine from the registry. This script is for CentOS, so replace the commands for the target OS if need be. NOTE: the docker installaction process is interactive, so you will have to answer prompts for each installation.
-- start-docker-engine.sh - after installing docker, you may have to explicitly.
+- start-docker-engine.sh - after installing docker, you may have to explicitly start docker engine.
 - enable-docker-service.sh - enables docker engine as a service so that docker starts automatically after reboots.
 - start-presearch-docker-container.sh - executes the docker command supplied by presearch. NOTE: this script takes your presearch registration code as a command line argument. `. execute-script-for-each.sh start-presearch-docker-container.sh machine-list "myRegistrationCode"`
 - reboot-machine.sh - reboots the VPS start docker engine.
