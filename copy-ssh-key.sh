@@ -19,6 +19,8 @@ do
     SEGMENTS=(${i// / })
     TARGETIP=${SEGMENTS[0]}
     USERPASS=${SEGMENTS[1]}
+    echo "Adding key verification..."
+    ssh-keyscan $TARGETIP >> ~/.ssh/known_hosts
     echo "Copying $KEY_LOCATION to $TARGETIP"
     sshpass -p $USERPASS ssh-copy-id -i $KEY_LOCATION "$USER"@"$TARGETIP"
   done
